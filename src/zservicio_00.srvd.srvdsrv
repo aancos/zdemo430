@@ -1,0 +1,4 @@
+@EndUserText.label: 'Servicio'
+define service ZSERVICIO_00 {
+  expose Z00_C_EMPLOYEEQUERY;
+}

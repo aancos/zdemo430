@@ -1,0 +1,22 @@
+@Metadata.layer: #CORE
+annotate entity Z00_C_EMPLOYEEQUERY
+    with 
+{
+    @UI.selectionField: [{ position: 10 }]
+    @UI.lineItem: [{ position: 10 }]
+    EmployeeId;
+   
+    @UI.lineItem: [{ position: 20 }]
+    FirstName;
+    @UI.selectionField: [{ position: 30 }]
+    @UI.lineItem: [{ position: 30 }]
+    LastName;
+    @UI.lineItem: [{ position: 40, importance: #MEDIUM}]
+    EmployeeRole;
+    @UI.lineItem: [{ position: 50 }]
+    EntryDate;
+    @UI.lineItem: [{ position: 60, importance: #HIGH}]
+    CompanyAffiliation;
+    @UI.selectionField: [{ position: 40 }]
+    DepartmentId;
+}

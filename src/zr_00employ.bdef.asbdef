@@ -1,0 +1,54 @@
+managed implementation in class ZBP_R_00EMPLOY unique;
+strict ( 2 );
+with draft;
+extensible;
+define behavior for ZR_00EMPLOY alias Zr00employ
+persistent table Z00EMPLOY
+extensible
+draft table Z00EMPLOY_D
+etag master LocalLastChangedAt
+lock master total etag LastChangedAt
+authorization master( global )
+{
+  field ( mandatory : create )
+   EmployeeID;
+
+  field ( readonly )
+   CreatedBy,
+   CreatedAt,
+   LocalLastChangedBy,
+   LocalLastChangedAt,
+   LastChangedAt;
+
+  field ( readonly : update )
+   EmployeeID;
+
+
+  create;
+  update;
+  delete;
+
+  draft action Activate optimized;
+  draft action Discard;
+  draft action Edit;
+  draft action Resume;
+  draft determine action Prepare;
+
+  mapping for Z00EMPLOY corresponding extensible
+  {
+    EmployeeID = employee_id;
+    FirstName = first_name;
+    LastName = last_name;
+    BirthDate = birth_date;
+    EntryDate = entry_date;
+    DepartmentID = department_id;
+    AnnualSalary = annual_salary;
+    CurrencyCode = currency_code;
+    CreatedBy = created_by;
+    CreatedAt = created_at;
+    LocalLastChangedBy = local_last_changed_by;
+    LocalLastChangedAt = local_last_changed_at;
+    LastChangedAt = last_changed_at;
+  }
+
+}

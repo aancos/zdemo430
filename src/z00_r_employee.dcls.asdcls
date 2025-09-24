@@ -1,0 +1,11 @@
+@EndUserText.label: 'AC Empleados'
+@MappingRole: true
+define role Z00_R_EMPLOYEE {
+    grant 
+        select
+            on
+                Z00_R_EMPLOYEE
+                    where
+                        (DepartmentId) = aspect pfcg_auth(Z00DEPT, Z00DEPT, ACTVT = '03');
+                        
+}
