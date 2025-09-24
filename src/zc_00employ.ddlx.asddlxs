@@ -23,9 +23,7 @@ annotate view ZC_00EMPLOY with
   } ]
   EmployeeID;
   
-  @UI.identification: [ {
-    position: 20 
-  } ]
+
   @UI.lineItem: [ {
     position: 20 
   } ]
